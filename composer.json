@@ -2,6 +2,13 @@
     "name": "jetiradoro/laravel-session-manager",
     "description": "Manage current sessions in laravel application",
     "type": "laravel-package",
+    "keywords": [
+        "jetiradoro",
+        "laravel",
+        "sessions",
+        "users"
+    ],
+    "homepage": "https://github.com/jetiradoro/laravel-session-manager",
     "require": {
         "php": ">=7.0",
         "illuminate/support" : "5.*"
