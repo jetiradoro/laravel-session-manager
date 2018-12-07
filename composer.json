@@ -1,0 +1,46 @@
+{
+    "name": "jetiradoro/laravel-session-manager",
+    "description": "Manage current sessions in laravel application",
+    "type": "laravel-package",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support" : "5.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.4.2|~3.5.0|~3.6.0|~3.7.0",
+        "phpunit/phpunit": "^5.7|6.2|^7.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jesús",
+            "email": "jesus@jetiradoro.com",
+            "role": "Developer",
+            "homepage": "https://jetiradoro.com"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "Jetiradoro\\SessionManager\\" : "src"
+        }
+    },
+    "autoload-dev":{
+        "psr-4":{
+            "Jetiradoro\\SessionManager\\Test\\": "tests"
+        }
+    },
+    "config":{
+        "sort-packages" : true
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jetiradoro\\SessionManager\\SessionManagerServiceProvider"
+            ]
+        }
+    }
+
+}
