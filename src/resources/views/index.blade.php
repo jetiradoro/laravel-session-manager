@@ -2,8 +2,16 @@
 @section('content')
     <div id="sm-app">
         <div v-cloak class="container ">
+                <div class="page-header">
+                        <h2>Current Sessions
+        
+                        </h2>
+                        <p>
+                            <small>- This connections has more than {{ config('session-manager.time_from_last_conn') }} minutes old. - </small>
+                        </p>
+                    </div>
             <div style="margin-bottom: 15px">
-                <button class="btn btn-primary" @click="load"> <i class="fa fa-refresh"></i> </button>
+                <button class="btn btn-primary" @click="load"> <i class="fa fa-refresh"></i> Refresh</button>
             </div>
             <table class="table table-sm table-condensed table-hover">
                 <thead>
@@ -25,7 +33,7 @@
             </table>
         </div>
     </div>
-
+   
     <script>
         window.sm_config = {!! json_encode(config('session-manager')) !!};
     </script>

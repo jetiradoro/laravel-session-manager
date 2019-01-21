@@ -16,7 +16,7 @@ const vm = new Vue({
         },
         'remove': async function (session) {
             console.log(session.id);
-            if (confirm("Estàs segur/a de tancar la sessió de l'usuari")) {
+            if (confirm(sm_config.confirm_msg)) {
                 axios.delete(sm_config.route_destroy_session + session.user.id).then(response => {
                     alert(response.data.status);
                     this.load();
